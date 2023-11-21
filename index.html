@@ -1,52 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>WeatherApp</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>WeatherApp</title>
 </head>
+
 <body>
-    <section class="viewport">
-        <div class="warning">
-          <p>⚠️ Scroll-driven animations are not supported in this browser. Try this demo in Chrome 115+.</p>
-        </div>
-        <header class="flex-stack">
-          <h1 id="location">
-            <span id="city">Fresh Coast</span>
-            <span id="summary">
-              78° | Sunny
-            </span>
-          </h1>
-          <p class="flex-stack" style="--space: 0.2rem" aria-hidden="true">
-            <span id="temperature" class="current-temp heading-lg">78</span>
-            <span id="condition">Sunny</span>
-          </p>
-          <ul id="range" class="cluster" role="list" style="--justify: center; --gap: 0.5rem">
-            <li>Максимальная: <span id="maxt"></span><span>&deg;</span></li>
-            <li>Минимальная: <span id="mint"></span><span>&deg;</span></li>
-          </ul>
-        </header>
-      
-        <main>
-          <article>
-            <h2 id="severe-weather">Дополнительные параметры</h2>
-            <figure class="stack">
-              <blockquote>
-                <p>Ощущается как: <span id="feels-like"></span><span>&deg;</span></p>
-                <p>Давление: <span id="pressure"></span> <span>мм.рт.ст</span></p>
-                <p>Влажность: <span id="humidity"></span><span>%</span></p>
-                <p>Ветер: <span id="wind"></span> <span>м/с</span></p>
-                <p>Рассвет: <span id="sunrise"></span></p>
-                <p>Закат: <span id="sunset"></span></p>
-              </blockquote>
-              <!-- <figcaption>
+  <section class="viewport">
+    <header class="flex-stack">
+      <h1 id="location">
+        <span id="city">City</span>
+        <span id="summary">15</span>
+      </h1>
+      <p class="flex-stack" style="--space: 0.2rem" aria-hidden="true">
+        <span id="temperature" class="current-temp heading-lg">78</span>
+        <span id="condition">Temp</span>
+      </p>
+      <ul id="range" class="cluster" role="list" style="--justify: center; --gap: 0.5rem">
+        <li>Максимальная: <span id="maxt"></span><span>&deg;</span></li>
+        <li>Минимальная: <span id="mint"></span><span>&deg;</span></li>
+      </ul>
+    </header>
+
+    <main>
+      <article>
+        <h2 id="severe-weather">Дополнительные параметры</h2>
+        <figure class="stack">
+          <blockquote>
+            <p>Ощущается как: <span id="feels-like"></span><span>&deg;</span></p>
+            <p>Давление: <span id="pressure"></span> <span>мм.рт.ст</span></p>
+            <p>Влажность: <span id="humidity"></span><span>%</span></p>
+            <p>Ветер: <span id="wind"></span> <span>м/с</span></p>
+            <p>Рассвет: <span id="sunrise"></span></p>
+            <p>Закат: <span id="sunset"></span></p>
+          </blockquote>
+          <!-- <figcaption>
                 <cite>По данным сервиса погоды</cite>
               </figcaption> -->
-            </figure>
-          </article>
-      
-          <!-- <article>
+        </figure>
+      </article>
+
+      <!-- <article>
             <h2 id="hourly-forecast">Hourly forecast</h2>
             <ol class="x-scroll" role="list">
               <li class="forecast-tile">
@@ -110,9 +107,9 @@
                 <span>64°</span>
               </li>
             </ol>
-          </article> -->
-      
-          <!-- <article>
+          </article>
+
+      <article>
             <h2 id="10-day-forecast">10-day forecast</h2>
             <ol class="flex-stack" role="list" style="--space: 0.75rem">
               <li class="forecast-row">
@@ -141,8 +138,8 @@
                   <div class="meter"></div>
                   <span class="high">79°</span>
                 </div>
-              </li> -->
-              <!-- <li class="forecast-row">
+              </li>
+      <li class="forecast-row">
                 <span>Mon</span>
                 <span>☀️</span>
                 <div class="range">
@@ -204,11 +201,11 @@
                   <div class="meter"></div>
                   <span class="high">86°</span>
                 </div>
-              </li> -->
-            </ol>
-          </article>
-      
-          <!-- <article>
+              </li>
+      </ol>
+      </article> -->
+
+      <!-- <article>
             <h2 id="air-quality">Air quality</h2>
             <div class="stack">
               <p>62 - Moderate</p>
@@ -216,8 +213,8 @@
               <div class="meter" style="margin-top: 1rem"></div>
             </div>
           </article> -->
-      
-          <!-- <article style="aspect-ratio: 5/3">
+
+      <!-- <article style="aspect-ratio: 5/3">
             <h2 id="precipitation">Precipitation</h2>
           </article>
       
@@ -245,14 +242,14 @@
           <article class="tile">
             <h2>Pressure</h2>
           </article> -->
-      
-          <footer>
-            <h2>Погода</h2>
-            <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJbD_7OjJ5e7QM5Jc_u6nE5j9AMHzGHG2Pp76vFQekkZWRncAKrFz7weF3hIMWv2OlsQ&usqp=CAU" alt="weather"> -->
-            <p><small>По данным сервиса Погода</small></p>
-          </footer>
-          </d>
-        </main>
-        <script src="script.js"></script>
+
+      <!-- <footer>
+        <h2>Погода</h2>
+                <p><small>По данным сервиса Погода</small></p>
+      </footer>
+      </d> -->
+    </main>
+    <script src="script.js"></script>
 </body>
+
 </html>

@@ -17,7 +17,7 @@ const fetchData = async () => {
 
     let condition = document.getElementById('condition');
     condition.innerHTML = data.weather[0].description;
-    
+
     let maxtemp = document.getElementById('maxt');
     maxtemp.innerHTML = Math.round(data.main.temp_max);
 
@@ -35,27 +35,30 @@ const fetchData = async () => {
 
     let wind = document.getElementById('wind');
     wind.innerHTML = data.wind.speed;
-    
+
+    function timeConverter(UNIX_timestamp) {
+        let a = new Date(UNIX_timestamp * 1000);
+        let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        let year = a.getFullYear();
+        let month = months[a.getMonth()];
+        let date = a.getDate();
+        let hour = a.getHours();
+        let min = a.getMinutes();
+        let sec = a.getSeconds();
+        let time = hour + ':' + min + ':' + sec;
+        return time;
+    }
+
+    let timesunrise = timeConverter(data.sys.sunrise);
+    let timesunset = timeConverter(data.sys.sunset);
+
     let sunrise = document.getElementById('sunrise');
-    sunrise.innerHTML = data.sys.sunrise;
+    sunrise.innerHTML = timesunrise;
 
     let sunset = document.getElementById('sunset');
-    sunset.innerHTML = data.sys.sunset;
+    sunset.innerHTML = timesunset;
 
 
 }
 
 fetchData();
-
-
-
-
-
-// const fetchData2 = async () => {
-//     const result = await fetch('https://api.weather.yandex.ru/v2/forecast?lat=55.75396&lon=37.620393&extra=true', { method: 'GET',  headers: { "X-Yandex-API-Key": "97d7f833-8c47-48e1-b627-d8e8531c5759" }});
-//     const data = await result.json();
-
-//     console.log(data);
-// }
-
-// fetchData2();
