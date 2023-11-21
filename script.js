@@ -19,10 +19,29 @@ const fetchData = async () => {
     condition.innerHTML = data.weather[0].description;
     
     let maxtemp = document.getElementById('maxt');
-    maxtemp.innerHTML = data.main.temp_max;
+    maxtemp.innerHTML = Math.round(data.main.temp_max);
 
     let mintemp = document.getElementById('mint');
-    mintemp.innerHTML = data.main.temp_min;
+    mintemp.innerHTML = Math.round(data.main.temp_min);
+
+    let feelslike = document.getElementById('feels-like');
+    feelslike.innerHTML = Math.round(data.main.feels_like);
+
+    let humidity = document.getElementById('humidity');
+    humidity.innerHTML = data.main.humidity;
+
+    let pressure = document.getElementById('pressure');
+    pressure.innerHTML = data.main.pressure;
+
+    let wind = document.getElementById('wind');
+    wind.innerHTML = data.wind.speed;
+    
+    let sunrise = document.getElementById('sunrise');
+    sunrise.innerHTML = data.sys.sunrise;
+
+    let sunset = document.getElementById('sunset');
+    sunset.innerHTML = data.sys.sunset;
+
 
 }
 

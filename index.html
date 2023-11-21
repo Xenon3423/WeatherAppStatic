@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>WeatherApp</title>
 </head>
 <body>
     <section class="viewport">
@@ -23,25 +23,30 @@
             <span id="condition">Sunny</span>
           </p>
           <ul id="range" class="cluster" role="list" style="--justify: center; --gap: 0.5rem">
-            <li>Максимальная&deg;: <span id="maxt"></span></li>
-            <li>Минимальная&deg;: <span id="mint"></span></li>
+            <li>Максимальная: <span id="maxt"></span><span>&deg;</span></li>
+            <li>Минимальная: <span id="mint"></span><span>&deg;</span></li>
           </ul>
         </header>
       
         <main>
           <article>
-            <h2 id="severe-weather">Severe Weather</h2>
+            <h2 id="severe-weather">Дополнительные параметры</h2>
             <figure class="stack">
               <blockquote>
-                <p>Hurricane Local Statement until 3:00 AM on Saturday. Additional alerts: Tropical Storm Watch, Flood Watch.</p>
+                <p>Ощущается как: <span id="feels-like"></span><span>&deg;</span></p>
+                <p>Давление: <span id="pressure"></span> <span>мм.рт.ст</span></p>
+                <p>Влажность: <span id="humidity"></span><span>%</span></p>
+                <p>Ветер: <span id="wind"></span> <span>м/с</span></p>
+                <p>Рассвет: <span id="sunrise"></span></p>
+                <p>Закат: <span id="sunset"></span></p>
               </blockquote>
-              <figcaption>
-                <cite>National Weather Service</cite>
-              </figcaption>
+              <!-- <figcaption>
+                <cite>По данным сервиса погоды</cite>
+              </figcaption> -->
             </figure>
           </article>
       
-          <article>
+          <!-- <article>
             <h2 id="hourly-forecast">Hourly forecast</h2>
             <ol class="x-scroll" role="list">
               <li class="forecast-tile">
@@ -105,9 +110,9 @@
                 <span>64°</span>
               </li>
             </ol>
-          </article>
+          </article> -->
       
-          <article>
+          <!-- <article>
             <h2 id="10-day-forecast">10-day forecast</h2>
             <ol class="flex-stack" role="list" style="--space: 0.75rem">
               <li class="forecast-row">
@@ -136,7 +141,7 @@
                   <div class="meter"></div>
                   <span class="high">79°</span>
                 </div>
-              </li>
+              </li> -->
               <!-- <li class="forecast-row">
                 <span>Mon</span>
                 <span>☀️</span>
@@ -242,9 +247,9 @@
           </article> -->
       
           <footer>
-            <h2>Яндекс Погода</h2>
+            <h2>Погода</h2>
             <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJbD_7OjJ5e7QM5Jc_u6nE5j9AMHzGHG2Pp76vFQekkZWRncAKrFz7weF3hIMWv2OlsQ&usqp=CAU" alt="weather"> -->
-            <p><small>По данным сервиса Яндекс.Погода</small></p>
+            <p><small>По данным сервиса Погода</small></p>
           </footer>
           </d>
         </main>
