@@ -13,7 +13,7 @@
         </div>
         <header class="flex-stack">
           <h1 id="location">
-            Fresh Coast
+            <span id="city">Fresh Coast</span>
             <span id="summary">
               78° | Sunny
             </span>
@@ -23,8 +23,8 @@
             <span id="condition">Sunny</span>
           </p>
           <ul id="range" class="cluster" role="list" style="--justify: center; --gap: 0.5rem">
-            <li>H: 80°</li>
-            <li>L: 63°</li>
+            <li>Максимальная&deg;: <span id="maxt"></span></li>
+            <li>Минимальная&deg;: <span id="mint"></span></li>
           </ul>
         </header>
       
@@ -248,5 +248,6 @@
           </footer>
           </d>
         </main>
+        <script src="script.js"></script>
 </body>
 </html>
